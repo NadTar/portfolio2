@@ -1,38 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
 .App {
   text-align: center;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project {
+  display: block;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #d7e4f1;
+  min-height: 50vh;
+  margin-top: 5vh;
+  margin-left: 5px;
+  margin-right: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  width: 50%;
+  position: absolute;
+  left: 48%;
+  top: 5%;
+}
+
+#navbar {
+  height: 10vh;
+   margin-bottom: 5px;
+   display: flex;
+   flex-direction: row;
+   justify-content:space-between;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 30%;
+  margin-left: 5%;
+  align-self: flex-end;
+}
+ .mini {
+   width: 20px;
+   height: 20px;
+   margin-top: 5%;
+   margin-right: 10%;
+ }
+
+  
+#back {
+  position: absolute;
+  flex-direction: row;
+  left: 4%;
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 80%;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  margin-left: 5px;
+  margin-bottom: 0.5vh;
+}
+
+h4 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.2vh;
+}
+
+.work img {
+  height: fit-content;
+  width: fit-content;
+  transform: scale(0.7);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f6faff;
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  margin: 0.5vh;
+}
+
+ol {
+  font-family: 'Crimson Text', serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5vh;
+  font-size: 1rem;
+  list-style-type: decimal;
+  width: 50vw;
+  text-align: center;
+}
+
+ul {
+  font-family: 'Crimson Text', serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5vh;
+  font-size: 1rem;
+  list-style-type: disc;
+  width: 50vw;
+  text-align: center;
+}
+
+p b {
+  font-size: 1.2rem;
+}
+
+.prof {
+  position: fixed;
+  left: 67%;
+  bottom: 0px;
+  height: 70%;
+  max-height: 90vh;
+}
+
+#about {
+  margin-left: 10%;
+  margin-right: auto;
+  width: 50vw;
+  text-align: left;
+}
+
+#about h2 {
+  text-align: left;
+}
+
+ a {
+  cursor: pointer;
+  font-weight: bold;
+}  
+
+a:hover {
+  transform: scale(1.05);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10%;
+  width: 50vw;
+}
+
+input[type=text]{
+  font-family: 'Crimson Text', serif;
+  background-color: #d7e4f5;
+  font-weight: bold;
+  font-size: 18px;
+  width: 40vw;
+  height: 20px;
+}
+
+#message {
+  height: 30vh;
+  background-color: #d7e4f1;
+  font-family: 'Crimson Text', serif;
+  font-weight: bold;
+  width: 40vw;
+  font-size: 18px;
+}
+
+#submit {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 30%
+}
+
+ .arrow {
+   width: 10vh;
+   margin-left: 0.5vh;
+   margin-right: 0.5vh;
+ }
+
+ .scaled {
+   cursor: pointer;
+   height: 225px;
+   width: 180px;
+ }
+  hr {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+    border-radius: 20px;
+    color: rgba(247, 251, 255, 0);
+    opacity: 0.4;
+  }
+ .screen {
+   border: 2px solid black;
+   margin: 10px;
+ }
+
+ .car {
+   max-height: auto;
+   width: 80vw;
+ }
+
+ .test {
+   height: 2vw;
+   width: 25vh;
+   transform: rotate(90deg);
+   align-self: center;
+ }
+
+ .icon {
+   height: 8vh;
+   width: 8vh;
+   align-self: flex-start;
+   margin-top: 3%;
+   margin-right: 2%;
+   margin-left: 2%;
+ }
+ 
+
+ .link {
+   font-weight: bold;
+   font-size: 1.1vmax;
+   text-decoration: underline;
+   transition: transform 300ms;
+ }
+
+ .link:hover {
+   cursor: pointer;
+   transform: scale(1.2);
+ }
+
+ .scale {
+  transition: transform 300ms;
+ }
+
+ .scale:hover {
+  transform: scale(1.1);
+ }
+
+
+ .t1 {
+   display: none;
+ }
+
+ .hidden {
+   display: none;
+ }
+ 
+#imgmap {
+  width: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#mobprof {
+  display: none;
 }
+
+#footer {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#footer h3 {
+  font-size: 1.3rem;
+  color: black;
+  opacity: 0.5;
+}
+
+#footer .links {
+  display: flex; 
+  flexDirection: row;
+  justify-content: space-evenly;
+}
+
+#footer .social {
+  margin: auto;
+  align-self: center;
+  justify-content: center;
+}
+
+#footer .selected {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .App-header {
+    min-height: 37vh;
+    margin-top: 0px;
+    font-size: 16px;
+    width: 80vw;
+    margin: auto
+  }
+
+
+  #navbar {
+    height: 10vh;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:space-evenly;
+  }
+
+  nav {
+    margin-top: 10%;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: auto;
+    position: inherit;
+    justify-content: space-evenly;
+    height: 20vh;
+  }
+
+  .social {
+    align-self: center;
+    display: none;
+  }
+
+  #about {
+    margin: auto;
+    width: 80vw;
+  }
+
+  #about h2 {
+    text-align: center;
+  }
+
+  .App-header h1 {
+    font-size: 1.5rem
+  }
+
+  h1 {
+    font-size: 1.5rem
+  }
+
+  h2 {
+    font-size: 1.3rem
+  }
+
+  h3 {
+    font-size: 1.2rem
+  }
+
+  h4 {
+    font-size: 1.1rem
+  }
+
+  p b {
+    font-size: 1.1rem
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 90vw;
+  }
+
+  .work {
+    align-items: center;
+  }
+
+  .screen {
+    width: 20vw;
+  }
+
+  .prof {
+   display: none;
+  }
+
+  form {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70vw;
+  }
+
+  input[type=text] {
+    width: 60vw;
+  }
+
+  #message {
+    width: 60vw;
+  }
+
+  #submit {
+    margin-left: 0;
+  }
+
+  .react-pdf__Page {
+    width: 90vw;
+    margin: auto;
+  }
+
+  #mobprof {
+    display: block;
+    height: 25vh;
+    width: auto;
+    margin: auto;
+  }
+
+  #footer .links {
+    flex-direction: column;
+  }
+
+
+}
+
+
+

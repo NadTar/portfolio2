@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Switch, Route, Link, useLocation, useHistory, withRouter} from 'react-router-dom'
+import Portfolio from './Portfolio'
+import About from './About'
+import Nav from './Nav'
+import Poolbuddy from './portfolio/poolbuddy'
+import Sentinel from './portfolio/sentinel'
+import Resume from './components/Resume'
+import Button from './components/Button';
+import Card from './components/Card'
+import Footer from './components/Footer'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      page: window.location.pathname
+    }
+  }
+
+  render () {
+    return (
+      <Router>
+        <div className="App">
+          <Nav page={this.state.page}></Nav><br></br><br></br>
+          <Switch>
+            <Route path="/" exact component={Portfolio}/>
+            <Route path="/about" component={About}/>
+            <Route path="/resume" component={Resume}/>
+            <Route path="/poolbuddy" component={Poolbuddy}/>
+            <Route path="/sentinel" component={Sentinel}/>
+          </Switch>
+          <Footer page={this.state.page}></Footer>
+        </div>
+      </Router>
+    )
+
+  }
 }
 
 export default App;
+
+
