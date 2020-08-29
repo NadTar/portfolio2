@@ -42,7 +42,7 @@ export default class NeuButton2 extends Component {
           cursor: 'pointer',
           minHeight: '25px',
           width: '25%',
-          minWidth: "20px",
+          minWidth: "80px",
           maxWidth: '160px',
           marginLeft: '20px',
           marginTop: '10px',

@@ -20,10 +20,10 @@ function Poolbuddy() {
         <header className="App-header" style={{minHeight: '40vh'}}>
         <h1>PoolBuddy</h1>
         <p><i>Facilitating Carpooling within a Community</i></p>
-        <img  onClick={() => setModalIsOpen1(true)}src='./images/poster.png'style={{maxHeight: '40vh', float: 'right', cursor: 'pointer'}}/>
+        <img  onClick={() => setModalIsOpen1(true)}src={require('../images/poster.png')}style={{maxHeight: '40vh', float: 'right', cursor: 'pointer'}}/>
         <Modal isOpen={modalIsOpen1}>
           <div style={{width: '100%', height: '100%'}} onClick={() => setModalIsOpen1(false)} >
-            <img  src='./images/poster.png' style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
+            <img  src={require('../images/poster.png')} style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
           </div>
         </Modal>
         <p>Project Poster: Click to enlarge</p>
@@ -41,17 +41,17 @@ function Poolbuddy() {
         <article>
           <h2>Process Summary</h2>
           <div style={{display: 'flex', justifyContent: 'center'}}>
-            <img src='./images/processsummary.svg'></img>
+            <img src={require('../images/processsummary.svg')}></img>
           </div>
           <p>The diagram above summarizes our design process for this project. The diamonds visualize the divergent and convergent methods we used in researching and designing Poolbuddy.</p>
         </article>
         <article>
           <h2>Team</h2>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-            <Screen img="./images/team/0.png" maxHeight="20vh" cap=" Mengjiao Li - UW Informatics Student"></Screen>
-            <Screen img="./images/team/1.png" maxHeight="20vh" cap=" Rachel Sitt - UW CSE Student"></Screen>
-            <Screen img="./images/team/2.png" maxHeight="20vh" cap=" Nadir Tareen - UW HCDE Student"></Screen>
-            <Screen img="./images/team/3.png" maxHeight="20vh" cap=" Perry Wu - UW CSE Student"></Screen>
+            <Screen img={require("../images/team/0.png")} maxHeight="20vh" cap=" Mengjiao Li - UW Informatics Student"></Screen>
+            <Screen img={require("../images/team/1.png")}  maxHeight="20vh" cap=" Rachel Sitt - UW CSE Student"></Screen>
+            <Screen img={require("../images/team/2.png")}  maxHeight="20vh" cap=" Nadir Tareen - UW HCDE Student"></Screen>
+            <Screen img={require("../images/team/3.png")}  maxHeight="20vh" cap=" Perry Wu - UW CSE Student"></Screen>
           </div>
         </article>
         <article>
@@ -78,10 +78,10 @@ function Poolbuddy() {
           <p><b>Scheduling</b><br></br> Participants from both research methods expressed a concern for scheduling the carpool. They suggested live update for locations of their drivers along with a clear itinerary for the entire ride. Two of the working professionals in the semi-structured interviews explained that they would not want anyone in the group to have to wait during the ride and that the application should facilitate scheduling and communicating in some way.</p>
           <p><b>Carpooling is different for everyone</b><br></br> One importanting finding from our research was that people had different definitions of what a carpool entailed. One participant mentioned that they would only be a rider for the carpool while offering monetary compensation to the driver. Another suggested a routine where the driver and rider alternated roles. One off rides to special events were also brought up. Thus, we realized that our platform should allow all these different carpool structures to be implemented. </p>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center", flexWrap: 'wrap'}}>
-            <img src='./images/int/0.png' style={{height: '40vh'}}></img>
-            <img src='./images/int/1.png' style={{height: '40vh'}}></img>
-            <img src='./images/int/2.png' style={{height: '40vh'}}></img>
-            <img src='./images/int/3.png' style={{height: '40vh'}}></img>
+            <img src={require("../images/int/0.png")} style={{height: '40vh'}}></img>
+            <img src={require("../images/int/1.png")} style={{height: '40vh'}}></img>
+            <img src={require("../images/int/2.png")} style={{height: '40vh'}}></img>
+            <img src={require("../images/int/3.png")} style={{height: '40vh'}}></img>
 
           </div>
         </article>
@@ -99,39 +99,43 @@ function Poolbuddy() {
         <article>
           <h2>Initial Proposal</h2>
           <p>For our initial design proposal, we decided to focus on requirements <b>1</b> and <b>2</b> as they encompassed the most important functional aspects of our platform.
-             We broke down these requirements into further subtasks. <b>Hover over each subtask to see how it is performed</b>.</p> <br></br>
+             We broke down these requirements into further subtasks. <b id="propinst">Hover over each subtask to see how it is performed</b>.</p> <br></br>
           <div id="imgmap">
-            <img id="def" src='images/proposal/default.jpg' className="screen"></img>
+            <img id="def" src={require('../images/proposal/default.jpg')} className="screen"></img>
             <div style={{display: 'flex', flexDirection:'column', justifyContent: 'space-evenly'}}>
-              <BulletMap text="- Create profiles with ride preferences" img='/images/proposal/create.jpg' target='#def'></BulletMap>
-              <BulletMap text="- Search and match with others based on profiles" img='/images/proposal/search.jpg' target='#def'></BulletMap>
-              <BulletMap text="- Maintain a schedule of carpools" img='/images/proposal/maintain.jpg' target='#def'></BulletMap>
-              <BulletMap text="- Message and communicate with carpoolers" img='/images/proposal/message.jpg' target='#def'></BulletMap>
-              <BulletMap text="- Live navigation" img='/images/proposal/nav.jpg' target='#def'></BulletMap>
+              <BulletMap text="- Create profiles with ride preferences" img={require('../images/proposal/create.jpg')} target='#def'></BulletMap>
+              <BulletMap text="- Search and match with others based on profiles" img={require('../images/proposal/search.jpg')} target='#def'></BulletMap>
+              <BulletMap text="- Maintain a schedule of carpools" img={require('../images/proposal/maintain.jpg')} target='#def'></BulletMap>
+              <BulletMap text="- Message and communicate with carpoolers" img={require('../images/proposal/message.jpg')} target='#def'></BulletMap>
+              <BulletMap text="- Live navigation" img={require('../images/proposal/message.jpg')} target='#def'></BulletMap>
             </div>
+          </div>
+          <div id="mobproposal">
+            <img src={require('../images/proposal/default.jpg')} style={{margin: 'auto', height:"40vh", width: 'auto'}}></img>
           </div>
         </article>
         <article>
         <article>
           <h2>Storyboards</h2>
           <p>We also created the following storyboards to represent what tasks 1 & 2 would entail in real-life scenarios</p>
+          <p className="mobinst">(Rotate screen to landscape view to fit image.)</p>
           <div style={{transform: 'scale(0.8)'}}>
           <Carousel>
             <div>
-              <img src="images/slides/st1.png" />
+              <img src={require("../images/slides/st1.png")} />
             </div>
             <div>
-              <img src="images/slides/st2.png" />
+              <img src={require('../images/slides/st2.png')}  />
             </div>
           </Carousel>
           </div>
         </article>
         <h2>Information Architecture</h2>
-        <p> Using the task requirements we were able to map out the information architecture of our first prototype. <br></br> The key screens corresponding to task requirements are colored <b style={{color: 'purple'}}>purple</b></p>
-        <img onClick={() => setModalIsOpen2(true)} src='./images/infoarchitecture.png' alt='poolbuddy information architecture' style={{maxWidth: '690px', maxHeight: '472px', cursor: 'pointer'}} className="screen"></img>
+        <p> Using the task requirements we were able to map out the information architecture of our first prototype. <br></br> The key screens corresponding to task requirements are colored <b style={{color: 'purple'}}>purple</b>. <b>Click to enlarge</b></p>
+        <img onClick={() => setModalIsOpen2(true)} src={require('../images/infoarchitecture.png')} alt='poolbuddy information architecture' style={{maxWidth: '690px', maxHeight: '472px', cursor: 'pointer'}} className="screen"></img>
         <Modal isOpen={modalIsOpen2}>
         <div style={{width: '100%', height: '100%'}} onClick={() => setModalIsOpen2(false)}>
-          <img  onClick={() => setModalIsOpen2(false)}src='./images/infoarchitecture.png' style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
+          <img  onClick={() => setModalIsOpen2(false)} src={require('../images/infoarchitecture.png')} style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
         </div>
         </Modal>
         </article>
@@ -142,46 +146,46 @@ function Poolbuddy() {
           <p>The screens below show how the prototype accomplishes each task with respect to the information architecture.</p>
           <h3>Task 1: Onboarding + Finding a Carpool</h3>
           <p><b>Onboarding</b></p>
-          <img src="./images/onboarding.jpg" alt="poolbuddy onborading paper" style={{maxHeight: '400px'}} className="screen"/>
+          <img src={require("../images/onboarding.jpg")} alt="poolbuddy onborading paper" style={{maxHeight: '400px'}} className="screen"/>
           <p>The screens adove show the onboarding process for our prototype which invovles scanning your driver license for safety purposes and inputting your preferences.</p>
           <br></br>
           <p><b>Create a ride</b></p>
           <br></br>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center"}}>
-            <Screen img='./images/task1/0.png' cap="Upcoming Rides Page"></Screen>
-            <Screen img='./images/task1/1.png' cap="Click Add Button"></Screen>
-            <Screen img='./images/task1/2.png' cap="Entering Ride Details"></Screen>
-            <Screen img='./images/task1/3.png' cap="Ride Page"></Screen>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
+            <Screen img={require('../images/task1/0.png')} cap="1. Upcoming Rides Page"></Screen>
+            <Screen img={require('../images/task1/1.png')} cap="2. Click Add Button"></Screen>
+            <Screen img={require('../images/task1/2.png')} cap="3. Entering Ride Details"></Screen>
+            <Screen img={require('../images/task1/3.png')} cap="4. Ride Page"></Screen>
           </div>
           <br></br>
           <p><b>Find a carpooler</b></p>
           <br></br>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center"}}>
-            <Screen img='./images/task1/4.png' cap='Ride Page'></Screen>
-            <Screen img='./images/task1/5.png' cap='Clicking add rider button'></Screen>
-            <Screen img='./images/task1/6.png' cap='Friends Screen'></Screen>
-            <Screen img='./images/task1/7.png' cap='Adding Rider'></Screen>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
+            <Screen img={require('../images/task1/4.png')} cap='5. Ride Page'></Screen>
+            <Screen img={require('../images/task1/5.png')} cap='6. Clicking add rider button'></Screen>
+            <Screen img={require('../images/task1/6.png')} cap='7. Friends Screen'></Screen>
+            <Screen img={require('../images/task1/7.png')} cap='8. Adding Rider'></Screen>
           </div>
           <br></br>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center"}}>
-            <Screen img='./images/task1/8.png' cap='App Generated Rider List'></Screen>
-            <Screen img='./images/task1/9.png' cap='User approves rider'></Screen>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
+            <Screen img={require('../images/task1/8.png')} cap='9. App Generated Rider List'></Screen>
+            <Screen img={require('../images/task1/9.png')} cap='10. User approves rider'></Screen>
           </div>
            </article>
           <h3>Task 2: Communicating Live Updates</h3>
           <p><b>Starting a Ride</b></p>
           <br></br>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center"}}>
-            <Screen img='./images/task2/0.png' cap='Notification on Lock Screen'></Screen>
-            <Screen img='./images/task2/1.png' cap='Clicking Ride Card'></Screen>
-            <Screen img='./images/task2/2.png' cap='Starting Ride'></Screen>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
+            <Screen img={require('../images/task2/0.png')} cap='1. Notification on Lock Screen'></Screen>
+            <Screen img={require('../images/task2/1.png')} cap='2. Clicking Ride Card'></Screen>
+            <Screen img={require('../images/task2/2.png')} cap='3. Starting Ride'></Screen>
           </div>
           <p><b>Navigation</b></p>
           <br></br>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "center"}}>
-            <Screen img='./images/task2/3.png' cap='Live Navigation'></Screen>
-            <Screen img='./images/task2/4.png' cap='Clicking chat button'></Screen>
-            <Screen img='./images/task2/5.png' cap='Chat communication'></Screen>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
+            <Screen img={require('../images/task2/3.png')} cap='4. Live Navigation'></Screen>
+            <Screen img={require('../images/task2/4.png')} cap='5. Clicking chat button'></Screen>
+            <Screen img={require('../images/task2/5.png')} cap='6. Chat communication'></Screen>
           </div>
           <article></article>
         </article>
@@ -190,7 +194,7 @@ function Poolbuddy() {
           <p><b>Methods:</b> Heuristic Analysis & Usability Testing</p>
           <h3>Heuristic Analysis</h3>
           <h4>Protocol</h4>
-          <p>For our heuristic analysis, each screen of our paper prototype was examined with respect <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">Nielsen's heuristics</a> by an evaluator. There were 2 evaluators, a student and TA from within our class. We classified each problem according to the heuristic violated and gave it a severity rating between 0-4 according to the following <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" target="_blank">scale</a>.</p>
+          <p>For our heuristic analysis, each screen of our paper prototype was examined with respect to<a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">Nielsen's heuristics</a> by an evaluator. There were 2 evaluators, a student and TA from within our class. We classified each problem according to the heuristic violated and gave it a severity rating between 0-4 according to the following <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" target="_blank">scale</a>.</p>
           <p>
             <ul><b>0</b> = I don't agree that this is a usability problem at all</ul>
             <ul><b>1</b> = Cosmetic problem only: need not be fixed unless extra time is available on project</ul>
@@ -202,29 +206,29 @@ function Poolbuddy() {
           <div>
             <p><b>1. Heuristic Violated: </b>Visibility of System Status</p>
             <p><b>Severity: </b>3</p>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ha/0.jpg' cap="Problem: No indication of scan status"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ha/1.png' cap="Fix: Scan prompt"></Screen>
-              <Screen img='./images/findings/ha/2.png' cap="Scan preview"></Screen>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em', flexWrap: 'wrap'}}>
+              <Screen img={require('../images/findings/ha/0.jpg')} cap="Problem: No indication of scan status"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ha/1.png')} cap="Fix: Scan prompt"></Screen>
+              <Screen img={require('../images/findings/ha/2.png')} cap="Scan preview"></Screen>
             </div>
           </div>
           <div>
             <p><b>2. Heuristic Violated: </b>Match between System & Real World</p>
             <p><b>Severity: </b>2</p>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ha/3.png' cap="Problem: Nav bar does not indicate current page"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ha/4.png' cap="Fix: Icon descriptions + tab above current page"></Screen>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em', flexWrap: 'wrap'}}>
+              <Screen img={require('../images/findings/ha/3.png')} cap="Problem: Nav bar does not indicate current page"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ha/4.png')} cap="Fix: Icon descriptions + tab above current page"></Screen>
             </div>
           </div>
           <div>
             <p><b>3. Heuristic Violated: </b>Error Prevention</p>
             <p><b>Severity: </b>3</p>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ha/5.png' cap="Problem: Accidental press will send request"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ha/6.png' cap="Fix: Confirmation prompt prior to sending request"></Screen>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em', flexWrap: 'wrap'}}>
+              <Screen img={require('../images/findings/ha/5.png')} cap="Problem: Accidental press will send request"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ha/6.png')} cap="Fix: Confirmation prompt prior to sending request"></Screen>
             </div>
           </div>
           <p></p>
@@ -256,30 +260,30 @@ function Poolbuddy() {
             <p><b>Severity: </b>4</p>
             <p>The most important finding from our testing was that their needed to be a clear distinction between creating a carpool as a driver and requesting a ride as a rider. Our solution was to clearly distinguish these roles by adding separate pathways for the driver and rider. The driver can create carpool rides and accept ride requests. The rider can request passage on existing rides and create ride requests</p> <br></br>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ut/0.png' cap="Problem: The user's role is unclear when starting the carpool"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ut/1.png' cap="Fix: User now has two paths to create a carpool with clear roles"></Screen>
+              <Screen img={require('../images/findings/ut/0.png')} cap="Problem: The user's role is unclear when starting the carpool"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ut/1.png')} cap="Fix: User now has two paths to create a carpool with clear roles"></Screen>
             </div>
           </div>
           <div>
             <p><b>2. Simplified Process of Finding Riders</b></p>
             <p><b>Severity: </b>3</p>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ut/3.png' cap="Problem: Add new friends function is unclear"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ut/4.png' cap="Iteration 1: Clarified labels and clearer visual hiearchy"></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ut/5.png' cap="Iteration 2: Priority on suggested riders and separate function to add friends"></Screen>
+              <Screen img={require('../images/findings/ut/3.png')}  cap="Problem: Add new friends function is unclear"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ut/4.png')} cap="Iteration 1: Clarified labels and clearer visual hiearchy"></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ut/5.png')} cap="Iteration 2: Priority on suggested riders and separate function to add friends"></Screen>
             </div>
           </div>
           <div>
             <p><b>3. Safer and Simpler Communication while en route</b></p>
             <p><b>Severity: </b>4</p>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: '1.5em'}}>
-              <Screen img='./images/findings/ut/6.png' cap="Problem: User suggested that supporting messaging while driving could be unsafe"></Screen>
-              <Screen img='./images/findings/ut/7.png' cap=""></Screen>
-              <img src="./images/arrow.svg" className="arrow"></img>
-              <Screen img='./images/findings/ut/8.png' cap="Fix: Replace with predetermined messages with important information such as ETAs that can be pressed and sent"></Screen>
+              <Screen img={require('../images/findings/ut/6.png')} cap="Problem: User suggested that supporting messaging while driving could be unsafe"></Screen>
+              <Screen img={require('../images/findings/ut/7.png')} cap=""></Screen>
+              <img src={require("../images/arrow.svg")} className="arrow"></img>
+              <Screen img={require('../images/findings/ut/8.png')} cap="Fix: Replace with predetermined messages with important information such as ETAs that can be pressed and sent"></Screen>
             </div>
           </div>
         </article>
@@ -295,43 +299,43 @@ function Poolbuddy() {
           <div style={{transform: 'scale(0.8)'}}>
           <Carousel>
             <div>
-              <img src="images/slides/0.png" />
+              <img src={require("../images/slides/0.png")}/>
             </div>
             <div>
-              <img src="images/slides/1.png" />
+              <img src={require("../images/slides/1.png")} />
             </div>
             <div>
-              <img src="images/slides/2.png" />
+              <img src={require("../images/slides/2.png")} />
             </div>
             <div>
-              <img src="images/slides/3.png" />
+              <img src={require("../images/slides/3.png")} />
             </div>
             <div>
-              <img src="images/slides/4.png" />
+              <img src={require("../images/slides/4.png")} />
             </div>
             <div>
-              <img src="images/slides/5.png" />
+              <img src={require("../images/slides/5.png")} />
             </div>
             <div>
-              <img src="images/slides/6.png" />
+              <img src={require("../images/slides/6.png")} />
             </div>
             <div>
-              <img src="images/slides/7.png" />
+              <img src={require("../images/slides/7.png")} />
             </div>
             <div>
-              <img src="images/slides/8.png" />
+              <img src={require("../images/slides/8.png")} />
             </div>
             <div>
-              <img src="images/slides/9.png" />
+              <img src={require("../images/slides/9.png")} />
             </div>
             <div>
-              <img src="images/slides/10.png" />
+              <img src={require("../images/slides/10.png")} />
             </div>
             <div>
-              <img src="images/slides/11.png" />
+              <img src={require("../images/slides/11.png")} />
             </div>
             <div>
-              <img src="images/slides/12.png" />
+              <img src={require("../images/slides/12.png")} />
             </div>
           </Carousel>
           </div>

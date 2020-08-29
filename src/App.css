@@ -272,7 +272,7 @@ input[type=text]{
 
  .link {
    font-weight: bold;
-   font-size: 1.1vmax;
+   font-size: 1.1rem;
    text-decoration: underline;
    transition: transform 300ms;
  }
@@ -344,6 +344,14 @@ input[type=text]{
   text-decoration: underline;
 }
 
+#mobproposal {
+  display: none
+}
+
+.mobinst {
+  display: none
+}
+
 @media only screen and (max-width: 600px) {
   hr {
     margin-top: 5px;
@@ -374,6 +382,11 @@ input[type=text]{
     position: inherit;
     justify-content: space-evenly;
     height: 20vh;
+  }
+
+  #back {
+    top: -70px;
+    left: 0px
   }
 
   .social {
@@ -469,6 +482,28 @@ input[type=text]{
     flex-direction: column;
   }
 
+  #imgmap {
+    display: none
+  }
+
+  #mobproposal {
+    display: block
+  }
+
+  #propinst {
+    display: none
+  }
+
+  .mobinst {
+    display: block;
+    font-weight: bold;
+  }
+
+  .arrow {
+    width: 10vw;
+    margin-top: 10%;
+    align-self: flex-start
+  }
 
 }
 

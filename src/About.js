@@ -8,10 +8,10 @@ import NeuForm from './components/Neuform'
 function About() {
     return (
       <div>
-      <img src="./images/prof.png" className="prof"></img>
+      <img src={require("./images/prof.png")} className="prof"></img>
       <header>
         <h1>About Me</h1> <br></br><br></br>
-        <img src="./images/prof.png" id="mobprof"></img>
+        <img src={require("./images/prof.png")} id="mobprof"></img>
       </header>
       <div id="about">
         <article>

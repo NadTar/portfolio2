@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Card from './components/Card'
 import './App.css'
+import pbud from './images/poolbuddy.png'
+import sent from './images/sentinel/sentineltri.png'
 
 function Portfolio() {
     return (
@@ -15,11 +17,11 @@ function Portfolio() {
       </header>
       <body class="work">
         <Link to="/poolbuddy" style={{ textDecoration: 'none', color: 'black' }}>
-          <Card img="./images/poolbuddy.png" name="PoolBuddy" role="UX Design" year="2020" desc="A UX project aimed at creating a platform to facilitate routine carpools."></Card>
-        </Link><br></br><hr></hr>
+          <Card img={require('./images/poolbuddy.png')} name="PoolBuddy" role="UX Design" year="2020" desc="A UX project aimed at creating a platform to facilitate routine carpools."></Card>
+        </Link><br></br><hr></hr><br></br><br></br>
         <Link to="/sentinel" style={{ textDecoration: 'none', color: 'black' }}>
-          <Card img="./images/sentinel/sentineltri.png" name="Sentinel" year="2019" role="UX Design" desc="A  UX project investigating the pain points of bikers in Seattle and culminating in a smart bike lock and tracking system."></Card>
-        </Link>
+          <Card img={require('./images/sentinel/sentineltri.png')} name="Sentinel" year="2019" role="UX Design" desc="A  UX project investigating the pain points of bikers in Seattle and culminating in a smart bike lock and tracking system."></Card>
+        </Link><br></br>
         <hr></hr>
         <article>
           <h2>About this Website</h2>

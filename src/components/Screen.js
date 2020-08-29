@@ -40,9 +40,9 @@ class Screen extends Component {
       onLoad
   } = this.props
     return (
-        <div className = {className} style={{display:'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: "center", maxWidth: '15vw'}}>
+        <div className = {className} style={{display:'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: "center", maxWidth: '30vw'}}>
             <img src={img} className="screen" style={{maxHeight: maxHeight || '50vh'}} onLoad={onLoad}></img>
-            <p style={{fontSize: '0.8em'}}>{cap}</p>
+            <p style={{fontSize: '1rem', fontWeight: '600'}}>{cap}</p>
         </div>
     )
   }

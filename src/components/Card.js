@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import NeuCard2 from './NeuCard2'
 import { useState, useEffect } from 'react'
 
+
 export default class Card extends Component {
 
   constructor(props){
@@ -35,8 +36,6 @@ export default class Card extends Component {
   }
   mouseOut = (e) => {
     this.setState({hovered: false})  
-
-    //console.log(this.state.hovered)
     console.log(e.type)
   }
   render () {
@@ -50,7 +49,7 @@ export default class Card extends Component {
     } = this.props
     return (
         <NeuCard2  width="65vw" height="auto" hovered={this.state.hovered} clicked={this.state.clicked}  mouseOver={this.mouseOver} mouseOut={this.mouseOut}>
-            <img src={img} style={{height: 'auto', width: '85%'}}/>
+            <img src={img} style={{height: 'auto', width: '95%'}}/>
             {this.state.hovered && <div className= "overlay">
                     <h1>{name}</h1>
                     <h2>{role}</h2>

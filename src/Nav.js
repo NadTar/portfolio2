@@ -25,10 +25,11 @@ class Nav extends Component {
 
     render () {
         let x = this.props.location.pathname
-        if (x !== '/' && x !== '/about' && x !== '/resume') {
+        console.log(x)
+        if (x !== '/portfolio2/' && x !== '/about' && x !== '/resume') {
             return (
               <nav id="back">
-                  <Button img="./images/back.svg" handleClick={this.handleClick.bind(this, '/')}></Button>
+                  <Button img={require("./images/back.svg")} handleClick={this.handleClick.bind(this, '/portfolio2/')}></Button>
               </nav>
               
             )
@@ -37,13 +38,13 @@ class Nav extends Component {
             return (
               <div id="navbar">
                 <div className="social">
-                  <a className="mini" href="https://github.com/NadTar" target="_blank"><img src="./images/git.svg" ></img></a>
-                  <a className="mini" href="https://www.linkedin.com/in/nadir-tareen-129760180/" target="_blank"><img src="./images/in.svg" ></img></a>
+                  <a className="mini" href="https://github.com/NadTar" target="_blank"><img src={require('./images/git.svg')} ></img></a>
+                  <a className="mini" href="https://www.linkedin.com/in/nadir-tareen-129760180/" target="_blank"><img src={require('./images/in.svg')} ></img></a>
                 </div>
                 <nav>
                   <Button text="About" to="/about" handleClick={this.handleClick.bind(this, '/about')} clicked ={x == "/about"}></Button>
                   <Button  text="Resume" to="/resume" handleClick={this.handleClick.bind(this, '/resume')} clicked={x == "/resume"}></Button>
-                  <Button text="Portfolio" to="/" clicked={x == "/"} handleClick={this.handleClick.bind(this, '/')}></Button>
+                  <Button text="Portfolio" to="/portfolio2/" clicked={x == "/portfolio2/"} handleClick={this.handleClick.bind(this, '/portfolio2/')}></Button>
                 </nav>  
               </div>
             )
