@@ -26,7 +26,7 @@ class Nav extends Component {
     render () {
         let x = this.props.location.pathname
         console.log(x)
-        if (x !== '/portfolio2/' && x !== '/about' && x !== '/resume') {
+        if (x !== '/portfolio2/' && x!== '/portfolio2' && x !== '/about' && x !== '/resume') {
             return (
               <nav id="back">
                   <Button img={require("./images/back.svg")} handleClick={this.handleClick.bind(this, '/portfolio2/')}></Button>
