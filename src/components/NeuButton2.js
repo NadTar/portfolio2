@@ -3,6 +3,12 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 export default class NeuButton2 extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      clicked: false
+    }
+  }
   static propTypes = {
     text: PropTypes.string,
     img: PropTypes.string,
@@ -12,7 +18,13 @@ export default class NeuButton2 extends Component {
     mouseOver: PropTypes.func,
     mouseOut: PropTypes.func,
     onClick: PropTypes.func,
-    className: PropTypes.string
+    className: PropTypes.string,
+    id: PropTypes.string
+  }
+
+  handleClick = () => {
+    this.props.onClick()
+    this.setState({clicked: !this.state.clicked})
   }
   
   render() {
@@ -25,7 +37,8 @@ export default class NeuButton2 extends Component {
       mouseOver,
       mouseOut,
       onClick,
-      className
+      className,
+      id
     } = this.props
 
     return (
@@ -49,7 +62,7 @@ export default class NeuButton2 extends Component {
           transform: clicked ? 'scale(0.98)' : '',
           backgroundColor: hovered ? '#d7e4f5' : '#d7e4f1',
           boxShadow: clicked ? '9px 9px 16px rgba(0, 0, 0, 0), -9px -9px 16px rgba(247, 251, 255, 0), 9px 9px 16px rgba(0, 0, 0, 0.1) inset, -9px -9px 16px rgba(247, 251, 255, 0.7) inset' : '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)',
-        }} onMouseEnter={mouseOver} onMouseLeave={mouseOut} onClick={onClick} className={className}>
+        }} onMouseEnter={mouseOver} onMouseLeave={mouseOut} onClick={this.handleClick} className={className} id={id}>
               {text}
               {img !== null && <img src={img} style={{maxHeight: '25px', maxWidth: '25px', alignSelf: "left"}}></img>}
           </div>

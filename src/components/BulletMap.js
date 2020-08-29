@@ -34,7 +34,7 @@ class BulletMap extends Component {
     this.setState({hovered: false}) 
     let t = document.querySelector('#del')
     let d = document.createElement('img')
-    d.src = './images/proposal/default.jpg'
+    d.src = '../images/proposal/default.jpg'
     d.id ='def'
     t.parentNode.replaceChild(d, t)
     

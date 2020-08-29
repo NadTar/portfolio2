@@ -23,9 +23,15 @@ function openPDF(pdf){
   return false;
 }
 
-function show(c) {
-  var x = document.querySelectorAll(c);
-  console.log(x)
+function show(c, z) {
+  var x = document.querySelectorAll(c)
+  var y = document.querySelector(z)
+  console.log(y.innerHTML)
+  if (y.innerHTML == "Expand") {
+    y.innerHTML = "Collapse"
+  } else {
+    y.innerHTML = "Expand"
+  }
   for (let i = 0; i < x.length; i++) {
     if (x[i].style.display == 'none') {
       x[i].style.display = 'flex';
@@ -203,8 +209,8 @@ function Sentinel() {
           </ol>
           <br></br>
           <h3 id="stor">Storyboards</h3><br></br>
-          <p>We each then created storyboards to visualize these requirements in a <b>real-world context.</b>
-          We practiced making both <b>illustrated</b> and <b>photo </b> storyboards.</p> <b>Hover on the window to expand.</b> <br></br>
+          <p>We each then created storyboards to visualize these requirements in a <b>real-world context.</b></p>
+          <br></br>
           <div style={{display: 'flex', justifyContent: 'center'}} onMouseEnter={() => scale('#story')} onMouseLeave={()=> scale('#story')}>
             `<div id="story" style={{height: '50%', width: '50%'}} className='scaled'  > 
               <Carousel>
@@ -252,20 +258,20 @@ function Sentinel() {
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '65vw', minWidth: '20vw'}}>
               <h4>Task 1: Onboarding + Pairing</h4> <br></br>
               <div style={{display: 'flex', flexDirection: 'row', justifyContent:'flex-start', flexWrap: 'wrap'}} >
-                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t1/0.JPG")} cap="User grants permissions" onLoad={() =>show(".t1") }></Screen>
+                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t1/0.JPG")} cap="User grants permissions" onLoad={() =>show(".t1",'#tb1') }></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/1.JPG")} cap="Pairing lock with phone"></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/2.JPG")} cap="Pairing complete"></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/3.JPG")} cap="User completes login info"></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/4.JPG")} cap="User agrees to a simplified T&C"></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/5.JPG")} cap="User adds their preferences"></Screen>
                 <Screen maxHeight='40vh' className="t1" img={require("../images/sentinel/pp/t1/6.JPG")} cap="User selects back up pin code"></Screen>
-                <NeuButton2 text="Expand" className="test" onClick={() =>show(".t1") }></NeuButton2>
+                <NeuButton2 text="Expand" className="test" id="tb1" onClick={() =>show('.t1', '#tb1') }></NeuButton2>
               </div>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',  maxWidth: '65vw', minWidth: '20vw'}}>
               <h4>Task 2: Selecting a bike rack + Navigation</h4> <br></br>
               <div style={{display: 'flex', flexDirection: 'row', justifyContent:'flex-start', flexWrap: 'wrap'}} >
-                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t2/0.JPG")} cap="Map button navigates to map screen." onLoad={() =>show(".t2") }></Screen>
+                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t2/0.JPG")} cap="Map button navigates to map screen." onLoad={() =>show(".t2", '#tb2') }></Screen>
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/1.JPG")} cap="Tapping on a bike rack will give information."></Screen>
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/2.JPG")} cap="Holding on the screen will bring up a list view of racks."></Screen>
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/3.JPG")} cap="Filtering bike racks by type."></Screen>
@@ -274,19 +280,19 @@ function Sentinel() {
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/6.JPG")} cap="Navigation"></Screen>
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/7.JPG")} cap="Navigation complete. User can save rack."></Screen>
                 <Screen maxHeight='40vh' className="t2" img={require("../images/sentinel/pp/t2/8.JPG")} cap="Saved rack is starred."></Screen>
-                <NeuButton2 text="Expand" className="test" onClick={() =>show(".t2") }></NeuButton2>
+                <NeuButton2 text="Expand" className="test" id="tb2" onClick={() =>show(".t2", '#tb2') }></NeuButton2>
               </div>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '65vw', minWidth: '20vw'}}>
               <h4>Task 3: Adding a new bick rack/resource to the map</h4> <br></br>
               <div style={{display: 'flex', flexDirection: 'row', justifyContent:'flex-start', flexWrap: 'wrap'}} >
-                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t2/0.JPG")} cap="User is on map screen at an unindexed location." onLoad={() =>show(".t3") }></Screen>
+                <Screen maxHeight='40vh' img={require("../images/sentinel/pp/t2/0.JPG")} cap="User is on map screen at an unindexed location." onLoad={() =>show(".t3", '#tb3') }></Screen>
                 <Screen maxHeight='40vh' className="t3" img={require("../images/sentinel/pp/t3/2.JPG")} cap="User presses add button to add new location"></Screen>
                 <Screen maxHeight='40vh' className="t3" img={require("../images/sentinel/pp/t3/4.JPG")} cap="Data input: Location pin drop"></Screen>
                 <Screen maxHeight='40vh' className="t3" img={require("../images/sentinel/pp/t3/6.JPG")} cap="Data input: Amenities"></Screen>
                 <Screen maxHeight='40vh' className="t3" img={require("../images/sentinel/pp/t3/7.JPG")} cap="Data input: Crowd reporting"></Screen>
                 <Screen maxHeight='40vh' className="t3" img={require("../images/sentinel/pp/t3/8.JPG")} cap="Submission completed"></Screen>
-                <NeuButton2 text="Expand" className="test" onClick={() =>show(".t3") }></NeuButton2>
+                <NeuButton2 text="Expand" className="test" id="tb3" onClick={() => show(".t3", "#tb3") }></NeuButton2>
               </div>
             </div>
           </div> <br></br>
@@ -408,9 +414,7 @@ function Sentinel() {
         </Carousel>
         </article>
         <article>
-          <h2>Reflection</h2>
-          <img src="./images/sentinel/reflect.png" style={{width: '45vw', margin: 'auto'}}></img><br></br>
-          <p>In order to reflect on the impact of this project on my journey in UX, I've used the excercise of rose, thorn, bud to distinguish between our successes, shortcomings and learning experiences.</p>
+          <h2>Reflection</h2><br></br>
           <h4>Successes</h4><br></br>
           <p><b>A unique solution -</b> We finished with confidence in our concept. We believe that there has yet to exist a system like Sentinel that focuses on all aspects of bike security, from theft prevention and detterence to tracking and recovery.</p>
           <p><b>Designing a physical product</b> - Most of our peers worked exclusively on mobile/web applications. We are proud to have an idea that also features a physical device.</p>

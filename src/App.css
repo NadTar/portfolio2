@@ -232,8 +232,7 @@ input[type=text]{
 
  .scaled {
    cursor: pointer;
-   height: 225px;
-   width: 180px;
+   transform: scale(1.1);
  }
   hr {
     margin-top: 5vh;
@@ -256,7 +255,6 @@ input[type=text]{
  .test {
    height: 2vw;
    width: 25vh;
-   transform: rotate(90deg);
    align-self: center;
  }
 

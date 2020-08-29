@@ -23,7 +23,8 @@ export default class Card extends Component {
       role: PropTypes.string,
       link: PropTypes.string,
       descr: PropTypes.string,
-      year: PropTypes.string
+      year: PropTypes.string,
+      time: PropTypes.string
   }
 
 
@@ -45,7 +46,8 @@ export default class Card extends Component {
         role,
         link,
         desc,
-        year
+        year,
+        time
     } = this.props
     return (
         <NeuCard2  width="65vw" height="auto" hovered={this.state.hovered} clicked={this.state.clicked}  mouseOver={this.mouseOver} mouseOut={this.mouseOut}>
@@ -54,7 +56,7 @@ export default class Card extends Component {
                     <h1>{name}</h1>
                     <h2>{role}</h2>
                     <p style={{width: '75%', margin: 'auto'}}>{desc}</p>
-                    <h4>{year}</h4>
+                    <h4>{year} - Read Time: {time}</h4>
                     <img src={img} style={{width: '40%', height: 'auto', marginBottom: "5px"}}></img>
                 </div>}
         </NeuCard2>

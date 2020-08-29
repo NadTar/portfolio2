@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import useHistory from 'react-router-dom'
 import Screen from '../components/Screen'
 import BulletMap from '../components/BulletMap'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -11,6 +12,53 @@ function imageScale() {
   i.classList.toggle('scaled')
   
 }
+
+var t = 0;
+var tim = null;
+
+function imgLoop(){
+  if (window.location.pathname == "/poolbuddy") {
+    var f = document.querySelectorAll('#propstat p')
+    console.log(f)
+    t++;
+    console.log(t)
+    var d = document.querySelector('#def')
+    if (t % 6 == 0) {
+      f[4].classList.remove('scaled')
+      d.src = require('../images/proposal/default.jpg')
+    } else if (t % 6 == 1) {
+      d.src = require('../images/proposal/create.jpg')
+      f[0].classList.add('scaled')
+    } else if (t % 6 == 2) {
+      d.src = require('../images/proposal/search.jpg')
+      f[0].classList.remove('scaled')
+      f[1].classList.add('scaled')
+    } else if (t % 6 == 3) {
+      d.src = require('../images/proposal/maintain.jpg')
+      f[1].classList.remove('scaled')
+      f[2].classList.add('scaled')
+    } else if (t % 6 == 4) {
+      d.src = require('../images/proposal/message.jpg')
+      f[2].classList.remove('scaled')
+      f[3].classList.add('scaled')
+    } else if (t % 6 == 5) {
+      d.src = require('../images/proposal/nav.jpg')
+      f[3].classList.remove('scaled')
+      f[4].classList.add('scaled')
+    } 
+  }
+}
+
+function statLoop() {
+  var f = document.querySelectorAll("#propstat p")
+}
+function slide() {
+  console.log("asdasda")
+  tim = setInterval(imgLoop, 1750)
+}
+
+setTimeout(slide, 2500)
+
 
 function Poolbuddy() {
   const [modalIsOpen1, setModalIsOpen1] = useState(false)
@@ -99,15 +147,15 @@ function Poolbuddy() {
         <article>
           <h2>Initial Proposal</h2>
           <p>For our initial design proposal, we decided to focus on requirements <b>1</b> and <b>2</b> as they encompassed the most important functional aspects of our platform.
-             We broke down these requirements into further subtasks. <b id="propinst">Hover over each subtask to see how it is performed</b>.</p> <br></br>
+             We broke down these requirements into further subtasks.</p>
           <div id="imgmap">
-            <img id="def" src={require('../images/proposal/default.jpg')} className="screen"></img>
-            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'space-evenly'}}>
-              <BulletMap text="- Create profiles with ride preferences" img={require('../images/proposal/create.jpg')} target='#def'></BulletMap>
-              <BulletMap text="- Search and match with others based on profiles" img={require('../images/proposal/search.jpg')} target='#def'></BulletMap>
-              <BulletMap text="- Maintain a schedule of carpools" img={require('../images/proposal/maintain.jpg')} target='#def'></BulletMap>
-              <BulletMap text="- Message and communicate with carpoolers" img={require('../images/proposal/message.jpg')} target='#def'></BulletMap>
-              <BulletMap text="- Live navigation" img={require('../images/proposal/message.jpg')} target='#def'></BulletMap>
+            <img id="def" src={require('../images/proposal/default.jpg')} className="screen" style={{height: '70vh'}}></img>
+            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'space-evenly'}} id="propstat">
+              <p><b>1.1- Create profiles with ride preferences</b></p>
+              <p><b>1.2- Search and match with others based on preferences</b></p>
+              <p><b>2.1- Maintain a schedule of carpools</b></p>
+              <p><b>2.2- Message and communicate with carpoolers</b></p>
+              <p><b>2.3- Live navigation</b></p>
             </div>
           </div>
           <div id="mobproposal">
@@ -131,8 +179,8 @@ function Poolbuddy() {
           </div>
         </article>
         <h2>Information Architecture</h2>
-        <p> Using the task requirements we were able to map out the information architecture of our first prototype. <br></br> The key screens corresponding to task requirements are colored <b style={{color: 'purple'}}>purple</b>. <b>Click to enlarge</b></p>
-        <img onClick={() => setModalIsOpen2(true)} src={require('../images/infoarchitecture.png')} alt='poolbuddy information architecture' style={{maxWidth: '690px', maxHeight: '472px', cursor: 'pointer'}} className="screen"></img>
+        <p> Using the task requirements we were able to map out the information architecture of our first prototype. <br></br> The key screens corresponding to task requirements are colored <b style={{color: 'purple'}}>purple</b></p><br></br>
+        <img onClick={() => setModalIsOpen2(true)} src={require('../images/infoarchitecture.png')} alt='poolbuddy information architecture' style={{width: '75vw', margin:'auto',  cursor: 'pointer'}} className="screen"></img>
         <Modal isOpen={modalIsOpen2}>
         <div style={{width: '100%', height: '100%'}} onClick={() => setModalIsOpen2(false)}>
           <img  onClick={() => setModalIsOpen2(false)} src={require('../images/infoarchitecture.png')} style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
@@ -149,7 +197,7 @@ function Poolbuddy() {
           <img src={require("../images/onboarding.jpg")} alt="poolbuddy onborading paper" style={{maxHeight: '400px'}} className="screen"/>
           <p>The screens adove show the onboarding process for our prototype which invovles scanning your driver license for safety purposes and inputting your preferences.</p>
           <br></br>
-          <p><b>Create a ride</b></p>
+          <p><b>1.1 - Create a ride</b></p>
           <br></br>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
             <Screen img={require('../images/task1/0.png')} cap="1. Upcoming Rides Page"></Screen>
@@ -158,7 +206,7 @@ function Poolbuddy() {
             <Screen img={require('../images/task1/3.png')} cap="4. Ride Page"></Screen>
           </div>
           <br></br>
-          <p><b>Find a carpooler</b></p>
+          <p><b>1.2 - Find a carpooler</b></p>
           <br></br>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
             <Screen img={require('../images/task1/4.png')} cap='5. Ride Page'></Screen>
@@ -173,14 +221,14 @@ function Poolbuddy() {
           </div>
            </article>
           <h3>Task 2: Communicating Live Updates</h3>
-          <p><b>Starting a Ride</b></p>
+          <p><b>2.1 - Starting a Ride</b></p>
           <br></br>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
             <Screen img={require('../images/task2/0.png')} cap='1. Notification on Lock Screen'></Screen>
             <Screen img={require('../images/task2/1.png')} cap='2. Clicking Ride Card'></Screen>
             <Screen img={require('../images/task2/2.png')} cap='3. Starting Ride'></Screen>
           </div>
-          <p><b>Navigation</b></p>
+          <p><b>2.2 - Navigation</b></p>
           <br></br>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: "flex-start", flexWrap: 'wrap'}}>
             <Screen img={require('../images/task2/3.png')} cap='4. Live Navigation'></Screen>
