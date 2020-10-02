@@ -58,6 +58,7 @@ nav {
    height: 20px;
    margin-top: 5%;
    margin-right: 10%;
+   margin-left: 10%;
  }
 
   
@@ -153,12 +154,13 @@ p b {
   font-size: 1.2rem;
 }
 
-.prof {
+#prof {
   position: fixed;
   left: 67%;
   bottom: 0px;
   height: 70%;
   max-height: 90vh;
+  z-index: -1;
 }
 
 #about {
@@ -235,9 +237,10 @@ input[type=text]{
    transform: scale(1.1);
  }
   hr {
+    display: block;
     margin-top: 5vh;
     margin-bottom: 5vh;
-    width: 80vw;
+    width: 87vw;
     border-radius: 20px;
     color: rgba(247, 251, 255, 0);
     opacity: 0.4;
@@ -313,25 +316,40 @@ input[type=text]{
 }
 
 #footer {
-  width: 80vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   margin: auto;
+  background-color: #d7e4f1;
+  z-index: 1;
 }
 
 #footer h3 {
   font-size: 1.3rem;
   color: black;
   opacity: 0.5;
+  flex-basis: 15vw;
+  transition: 300ms;
+}
+
+#footer h3:hover {
+  transform: scale(1.2);
+}
+
+#footer hr {
+  margin-top: 0;
 }
 
 #footer .links {
   display: flex; 
-  flexDirection: row;
+  margin: auto;
+  width: 90vw;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
 #footer .social {
+  width: 27vw;
   margin: auto;
   align-self: center;
   justify-content: center;
@@ -355,7 +373,9 @@ input[type=text]{
     margin-top: 5px;
     margin-bottom: 5px;
   }
+
   .App-header {
+    padding-top: 10px;
     min-height: 37vh;
     margin-top: 0px;
     font-size: 16px;
@@ -441,7 +461,7 @@ input[type=text]{
     width: 20vw;
   }
 
-  .prof {
+  #prof {
    display: none;
   }
 

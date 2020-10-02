@@ -85,14 +85,14 @@ function Poolbuddy() {
           <p><b>Duration:</b> 10 weeks</p>
           <p><b>Location:</b> University of Washington: Seattle</p>
           <p><b>Users:</b> Drivers, Riders, Current carpoolers</p>
-        </article>
+        </article><br></br><br></br>
         <article>
           <h2>Process Summary</h2>
           <div style={{display: 'flex', justifyContent: 'center'}}>
             <img src={require('../images/processsummary.svg')}></img>
           </div>
           <p>The diagram above summarizes our design process for this project. The diamonds visualize the divergent and convergent methods we used in researching and designing Poolbuddy.</p>
-        </article>
+        </article><br></br><br></br>
         <article>
           <h2>Team</h2>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
@@ -101,16 +101,16 @@ function Poolbuddy() {
             <Screen img={require("../images/team/2.png")}  maxHeight="20vh" cap=" Nadir Tareen - UW HCDE Student"></Screen>
             <Screen img={require("../images/team/3.png")}  maxHeight="20vh" cap=" Perry Wu - UW CSE Student"></Screen>
           </div>
-        </article>
+        </article><br></br><br></br>
         <article>
           <h2>My Role</h2>
           <p>This project was part of an undergraduate course in Human Computer Interaction with the Paul Allen School of Computer Science.
              As a team, we collectively choose to pursue this direction by bidding on this design problem from a selection of student proposals.
-             We approached the majority of the work as a team, but as the only one with research experience, I took the lead on the research plan and survey. I also drafted the intial paper prototypes.
+             We approached the majority of the work as a team, but as the only one with research experience, I took the lead on the <b>research plan</b>, <b>survey</b>, and <b>branding</b>. I also drafted the intial <b>paper prototypes</b>, conducted the <b>heuristic evaluation</b> and designed the <b>usability test</b> protocol. The rest of the design were iterated upon as a group.
           </p>
-        </article>
+        </article><br></br><br></br><hr></hr>
         <article>
-          <h2>User Research</h2>
+          <h2>User Research</h2><br></br>
           <p>As carpooling is an activity that is applicable to many user groups, we wanted to explore the different contexts of carpooling with a focus on users' current transport experience, previous carpool relationships and the factors they consider the most important in regards to carpooling.
           </p>
           <p>
@@ -118,8 +118,8 @@ function Poolbuddy() {
             We conducted these interviews with five different participants which included university students and working professionals who either drove, used public transport or biked. One of them had prior carpool experience. Interviews were recorded, transcribed and significant themes were analyzed using affinity diagramming.<br></br>
             Our secondary method was an online survey as it allowed us to gather feedback anonymously to prevent bias and reach a broad range of users. The survey was created on Google Forms and the results were analyzed using the visualizations provided. We also did a brief competitive analyses to look at similar applications such as Scoope, Waze and Uber
           </p>
-          <p><b>Tools Used:</b> Google Forms</p>
-          <h3>Results</h3>
+          <p><b>Tools Used:</b> Google Forms</p><br></br>
+          <h3>Results</h3><br></br>
           <br></br>
           <p><b>Safety</b><br></br>Our research showed that safety was a primary use concern. The survey results showed an interest in having background checks, reviews and ratings to help ensure a thorough screening for each member in the carpooling community. </p>
           <p><b>Preferences</b><br></br> Four out of five participants in our semi-structured interviews also suggested allowing users to choose their own preferences for their fellow carpoolers in order to set mutual expectations of each other. For example, one of the university students suggested drivers should clarify if smoking or eating in the car is allowed. </p>
@@ -132,9 +132,9 @@ function Poolbuddy() {
             <img src={require("../images/int/3.png")} style={{height: '40vh'}}></img>
 
           </div>
-        </article>
+        </article><br></br><hr></hr>
         <article>
-          <h2>Task Requirements</h2>
+          <h2>Task Requirements</h2> <br></br>
           <p>Using the findings from our research, we generated a list of required tasks that our design should enable:</p>
           <p><b>1. Finding carpoolers with compatible routes and preferences.</b><br></br> Finding people to carpool with who are not only geographically compatible with your target route but also compabitible with you ride preferences is a high priority of our design.
 </p>
@@ -186,7 +186,7 @@ function Poolbuddy() {
           <img  onClick={() => setModalIsOpen2(false)} src={require('../images/infoarchitecture.png')} style={{maxWidth:'100vw', maxHeight: '100vh', position: 'absolute', left: '25vw'}}/>
         </div>
         </Modal>
-        </article>
+        </article><br></br><hr></hr>
         <article>
           <h2>Paper Prototype</h2>
            <article>
@@ -236,13 +236,13 @@ function Poolbuddy() {
             <Screen img={require('../images/task2/5.png')} cap='6. Chat communication'></Screen>
           </div>
           <article></article>
-        </article>
+        </article><br></br><hr></hr>
         <article>
           <h2>Evaluation + Usability Testing</h2>
           <p><b>Methods:</b> Heuristic Analysis & Usability Testing</p>
           <h3>Heuristic Analysis</h3>
           <h4>Protocol</h4>
-          <p>For our heuristic analysis, each screen of our paper prototype was examined with respect to<a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">Nielsen's heuristics</a> by an evaluator. There were 2 evaluators, a student and TA from within our class. We classified each problem according to the heuristic violated and gave it a severity rating between 0-4 according to the following <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" target="_blank">scale</a>.</p>
+          <p>For our heuristic analysis, each screen of our paper prototype was examined with respect to <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">Nielsen's heuristics</a> by an evaluator. There were 2 evaluators, a student and TA from within our class. We classified each problem according to the heuristic violated and gave it a severity rating between 0-4 according to the following <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" target="_blank">scale</a>.</p>
           <p>
             <ul><b>0</b> = I don't agree that this is a usability problem at all</ul>
             <ul><b>1</b> = Cosmetic problem only: need not be fixed unless extra time is available on project</ul>
@@ -334,7 +334,7 @@ function Poolbuddy() {
               <Screen img={require('../images/findings/ut/8.png')} cap="Fix: Replace with predetermined messages with important information such as ETAs that can be pressed and sent"></Screen>
             </div>
           </div>
-        </article>
+        </article><br></br><hr></hr>
         <article>
           <h2>Digital Mockup</h2>
           <p>The digital mockup below was created on Marvel. It is fully interactive in order to prototype Tasks 1 & 2. The slides show the task flow for each screen of the mockup.</p>
@@ -387,7 +387,7 @@ function Poolbuddy() {
             </div>
           </Carousel>
           </div>
-        </article>
+        </article><br></br><hr></hr>
         <article>
           <h2>Reflection</h2>
           <p>Unfortunately the COVID-19 pandemic halted the last phase of our design plan for PoolBuddy. Our final design critiques, project video and project showcase were cancelled. Thus, we were unable to complete this project to its entirety and we missed valuable feedback from our peers that would have polished our idea further. Nevertheless, there were many learning experiences that I'd consider valuable to my journey as a designer.<br></br><br></br>
@@ -396,7 +396,8 @@ This was my first time working on a UX project with students who were not trying
 
 I am proud that we were able to accomplish the basic architecture for our matching system and scheduling system that accomodated a variety of carpool schedules. However, I would have liked to have put more time and research into studying how the benefits of carpooling can be visualized for our users as per the requirements we initially laid out.
 </p>
-        </article>
+        </article> <hr></hr>
+        <br></br><h2 style={{margin: 'auto'}}>Thank You for Reading !</h2><br></br><br></br>
       </body>
       </div>
         

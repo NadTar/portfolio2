@@ -110,16 +110,16 @@ function Sentinel() {
         <article>
           <h2>Team</h2>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-            <Screen img={require("../images/sentinel/team/tn.webp")} maxHeight="30vh" cap="I'm Travis Neils a sophomore in HCDE. I gained a good introduction into design methods from this class.I don't eat shaving cream because I don't like the taste - neilstra@uw.edu"></Screen>
-            <Screen img={require("../images/sentinel/team/ca.webp")} maxHeight="30vh" cap=" I'm Carl Arenas, a senior studying Psychology. I enjoy listening to podcasts and playing videogames - arenascarl17@gmail.com"></Screen>
-            <Screen img={require("../images/sentinel/team/nt.webp")} maxHeight="30vh" cap="I'm a Nadir a sophomore in HCDE. I'm an international student from Karachi, Pakistan. I enjoyed learning how to make prototypes in this class! - nadirkt@uw.edu"></Screen>
-            <Screen img={require("../images/sentinel/team/sy.webp")} maxHeight="30vh" cap="I'm Samantha, a senior majoring in Public Health and minoring in Gender, Women, and Sexuality Studies. I’m doing Teach for America in New York City after I graduate and I ran the Seattle Marathon this past fall - samantha.yi128@gmail.com"></Screen>
+            <Screen img={require("../images/sentinel/team/tn.webp")} maxHeight="30vh" cap="Travis Neils - Sophomore in HCDE"></Screen>
+            <Screen img={require("../images/sentinel/team/ca.webp")} maxHeight="30vh" cap="Carl Arenas - Senior in Psychology"></Screen>
+            <Screen img={require("../images/sentinel/team/nt.webp")} maxHeight="30vh" cap="Nadir - Sophomore in HCDE"></Screen>
+            <Screen img={require("../images/sentinel/team/sy.webp")} maxHeight="30vh" cap="Samantha - Senior in Public Health"></Screen>
           </div>
         </article>
         <article>
           <h2>Context & Role</h2>
           <p>This project was part of an upper level undergraduate course in User Centered Design with the University of Washington's Human Centered Design & Engineering department.
-              Our team was formed through random assignment and we collectively decided to focus our project on the biking community in Seattle. Initially we planned to divide the work for each deliverable evenly, however, due to schedule conficts I took the lead on making the paper prototype, homescreen wireframes and the 3-D renders of the lock and tracker.
+              Our team was formed through random assignment and we collectively decided to focus our project on the biking community in Seattle. Initially we planned to divide the work for each deliverable evenly, however, due to schedule conficts I took the lead on making the <b>paper prototype</b>, <b>homescreen wireframes</b> and <b>3-D rendering </b>the lock and tracker. The logo and name were also proposed by me.
           </p>
         </article><hr></hr>
         <article>
@@ -431,7 +431,7 @@ function Sentinel() {
           <p><b>Proficiency in interface design - </b>In creating prototypes, wireframes and mockups, I got a lot of practice making interfaces that I enjoyed and look forward to honing in future work.</p>
           <p><b>First comprehensive UX project - </b>As a newly accepted student into a design program, I am proud to have this as my first UX case study. The hands-on experience working with our user group, reaffirmed my passion for this emerging field.</p>
           <hr></hr>
-          <h2 style={{margin: 'auto'}}>Thank You!</h2>
+          <br></br><h2 style={{margin: 'auto'}}>Thank You for Reading !</h2><br></br>
         </article>
       </body>
       </div>

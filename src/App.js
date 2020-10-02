@@ -14,6 +14,7 @@ import './App.css';
 
 
 
+
 class App extends Component {
 
   constructor(props) {
@@ -22,6 +23,8 @@ class App extends Component {
       page: window.location.pathname
     }
   }
+
+  
 
   render () {
     return (

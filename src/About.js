@@ -5,10 +5,27 @@ import Neuform from './components/Neuform'
 import './App.css'
 import NeuForm from './components/Neuform'
 
+
+function checkOffset() {
+  var p = document.querySelector("#prof")
+  var f = document.querySelector('#footer')
+  var a = document.querySelector('#ab')
+  console.log(p.offsetTop)
+  if (p) {
+    if (p.offsetTop + p.height >= f.offsetTop - 10) {
+      p.style.position = "absolute"
+    }
+    if (a.scrollTop + window.innerHeight < f.offsetTop) {
+      p.style.position = "fixed"
+    }
+    
+  }
+}
+
 function About() {
     return (
-      <div>
-      <img src={require("./images/prof.png")} className="prof"></img>
+      <div id="ab" onScroll={() => checkOffset()}>
+      <img src={require("./images/prof.png")} id="prof"></img>
       <header>
         <h1>About Me</h1> <br></br><br></br>
         <img src={require("./images/prof.png")} id="mobprof"></img>

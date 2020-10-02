@@ -22,8 +22,8 @@ function Resume() {
         </Document>
         </div>
         <div style={{margin: 'auto', display: 'flex', justifyContent: 'center'}} ><NeuButton2 text="Download" onClick={()=>openPDF('./images/resume.pdf')}></NeuButton2></div>
-        
-      </div> 
+        <br></br><br></br>
+      </div>
     )
 }
 

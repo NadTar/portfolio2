@@ -26,14 +26,14 @@ class Footer extends Component {
         let x = this.props.location.pathname
             return ( 
               <div id="footer">
-                <br></br>
-                <hr></hr> 
+                  <hr></hr>
                 <div className="links">
-                    <h3 className={(x === "/portfolio2/" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/portfolio2/')}>Portfolio</a></h3>
+                    <h3 className={(x === "/portfolio2/" || x === "/portfolio2" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/portfolio2/')}>Portfolio</a></h3>
                     <h3 className={(x === "/resume" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/resume')}>Resume</a></h3>
                     <h3 className={(x === "/about" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/about')}>About</a></h3>
                     <h3 className={(x === "/poolbuddy" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/poolbuddy')}>Poolbuddy</a></h3>
                     <h3 className={(x === "/sentinel" ? 'selected' : '')}><a onClick={this.handleClick.bind(this, '/sentinel')}>Sentinel</a></h3>
+                    <h3><a href="https://drive.google.com/file/d/1S4oUsZ2CMuXoX-2aVCmJBs15A_YqzxUN/view" target="_blank" style={{color: 'black', textDecoration: 'none'}}>Real Change</a></h3>
                 </div><br></br>
                 <div className="social">
                   <a className="mini" href="https://github.com/NadTar" target="_blank"><img src={require('../images/git.svg')} ></img></a>
