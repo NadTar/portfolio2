@@ -25,10 +25,10 @@ function checkOffset() {
 function About() {
     return (
       <div id="ab" onScroll={() => checkOffset()}>
-      <img src={require("./images/prof.png")} id="prof"></img>
+      <img src={require("./images/prof1.png")} id="prof"></img>
       <header>
         <h1>About Me</h1> <br></br><br></br>
-        <img src={require("./images/prof.png")} id="mobprof"></img>
+        <img src={require("./images/prof1.png")} id="mobprof"></img>
       </header>
       <div id="about">
         <article>
