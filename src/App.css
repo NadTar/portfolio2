@@ -32,18 +32,23 @@ nav {
   flex-direction: row-reverse;
   align-items: center;
   width: 50%;
-  margin-top: 2.5%;
+  margin-top: 1.5%;
 }
 
 #navbar {
   height: 10vh;
   width: 87vw;
+  margin-top: 3vh;
   margin-right: auto;
   margin-left: auto;
    margin-bottom: 5px;
    display: flex;
    flex-direction: row;
    justify-content:space-between;
+}
+
+#ntlogo {
+  margin-top: 25px;
 }
 
 .social {
@@ -158,20 +163,23 @@ p b {
 
 #prof {
   position: fixed;
-  left: 67%;
+  left: 62%;
   bottom: 0px;
-  height: 80%;
+  height: 100%;
   max-height: 90vh;
   z-index: -1;
 }
 
 #about {
-  margin-left: 10%;
+  margin-left: 10vw;
   margin-right: auto;
   width: 50vw;
-  text-align: left;
+  text-align: justify;
 }
 
+#about article {
+  width: 40vw;
+}
 #about h2 {
   text-align: left;
 }

@@ -63,7 +63,8 @@ export default class NeuButton2 extends Component {
           backgroundColor: hovered ? '#d7e4f5' : '#d7e4f1',
           boxShadow: clicked ? '9px 9px 16px rgba(0, 0, 0, 0), -9px -9px 16px rgba(247, 251, 255, 0), 9px 9px 16px rgba(0, 0, 0, 0.1) inset, -9px -9px 16px rgba(247, 251, 255, 0.7) inset' : '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)',
         }} onMouseEnter={mouseOver} onMouseLeave={mouseOut} onClick={this.handleClick} className={className} id={id}>
-              {text}
+              {to == null && text}
+              {to != null && <a className="buttonlink" href={require('../images/sentinel/interviews/i.pdf')} target="_blank">{text}</a>}
               {img !== null && <img src={img} style={{maxHeight: '25px', maxWidth: '25px', alignSelf: "left"}}></img>}
           </div>
         

@@ -15,9 +15,10 @@ function Portfolio() {
       <div>
         <header className="App-header">
         <a.h1 style={aprops}>Hi, This is Nadir. Welcome to my portfolio.</a.h1>
-        <a.p style={aprops1}>I am an aspiring <b>UX engineer</b>, well versed in the <b>user-centered</b> methodology. <br></br> I strive to create design solutions that are justified in <b>research</b>, <b>best practices</b> and <b>ethics.</b>         
+        <a.p style={aprops1}>I am an aspiring <b>UX engineer</b>, well versed in the <b>user-centered</b> methodology. <br></br> I strive to create design solutions that are justified in <b>research</b>, <b>best practices</b> and <b>ethics.</b>
+        <a.p style={aprops2}>Take a look at some of my work below.</a.p>         
         </a.p>
-        <a.p style={aprops2}>Take a look at some of my work below.</a.p>
+        
         <hr></hr><br></br><br></br>
       </header>
       <body class="work">

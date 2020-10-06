@@ -38,8 +38,9 @@ class Nav extends Component {
           } else {
             return (
               <div id="navbar">
-                <div style={{marginTop: '2.5%'}}>
-                <Spring config= {{mass: 5, tension: 400, friction: 400}} from={{x: 400}} to={{x: 0}} delay={1800}>{props => (<svg id="ntlogo" strokeDashoffset={props.x}>            
+                <div>
+                <Spring config= {{mass: 5, tension: 400, friction: 400}} from={{x: 400}} to={{x: 0}} delay={1800}>{props => (<svg id="ntlogo" viewBox="0 0 110 110" width="80px"
+   height="80px" strokeDashoffset={props.x}>            
   <path
      id="path31"
      style={{fill: 'none', stroke: "#000000", strokeWidth: "5px", strokeDasharray: '400'}}
@@ -49,7 +50,7 @@ class Nav extends Component {
      id="path33"
      style={{fill: 'none', stroke: "#000000", strokeWidth: "5px", strokeDasharray: '400'}}
      transform="translate(-201.29 -278.89)"
-     d="M213.69,362.35c-13.72-18.39-13.14-45,1.52-62.67,15-18.12,40.13-22.65,59.52-14.15,18.1,7.93,25.29,24.59,26.91,28.64l-34,.24-18.71,0" />
+     d="m 213.69,362.35 c -13.72,-18.39 -13.14,-45 1.52,-62.67 15,-18.12 40.13,-22.65 59.52,-14.15 18.1,7.93 25.29,24.59 26.91,28.64 l -34,0.24 -10.585,0.125" />
  <rect
      y="75.560989"
      x="10.396679"

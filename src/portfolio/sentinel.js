@@ -6,6 +6,10 @@ import { Carousel } from 'react-responsive-carousel';
 import Modal from 'react-modal'
 import Button from '../components/Button';
 import NeuButton2 from '../components/NeuButton2';
+import interviews from '../images/sentinel/interviews/i.pdf'
+import compan from '../images/sentinel/compan/comp.pdf'
+import testrep from '../images/sentinel/pp/e.pdf'
+import wireframes from '../images/sentinel/wireframes/w.pdf'
 
 function scroll(id) {
   var anchor = document.querySelector(id)
@@ -150,7 +154,7 @@ function Sentinel() {
             <img className ="scale" src={require('../images/sentinel/interviews/b.svg')} style={{maxHeight: '55vh'}}></img>
           </div>
           <p>You can view the full interview protocol and transcripts by clicking the button below.</p> <br></br>
-          <div style={{display: 'flex', justifyContent:'center'}}><NeuButton2 text='Full Interviews' onClick={()=>openPDF('./images/sentinel/interviews/i.pdf')}></NeuButton2></div> <br></br>
+          <div style={{display: 'flex', justifyContent:'center'}}><NeuButton2 text='Full Interviews'  onClick={()=>openPDF(interviews)}></NeuButton2></div> <br></br>
           <h3 id="ca">Competitive Analysis</h3>
           <p>Once we had an understanding of our users'pain points, we studied the following competing products that inhabited our problem space:</p><br></br>
           <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
@@ -177,7 +181,7 @@ function Sentinel() {
             <p><b>- Crowdsourcing is an effective way to build a map. </b> Rackspotter showed the effectiveness of crowdsourcing to map bike racks in Arlington.</p>
           </div>
           <p>You can view the full analysis report by clicking the button below.</p> <br></br>
-          <div style={{display: 'flex', justifyContent:'center'}}><NeuButton2 text='Full Report' onClick={()=>openPDF('./images/sentinel/compan/comp.pdf')}></NeuButton2></div> <br></br>
+          <div style={{display: 'flex', justifyContent:'center'}}><NeuButton2 text='Full Report' onClick={()=>openPDF(compan)}></NeuButton2></div> <br></br>
           <h3 id="per">Personas</h3>
           <p>To synthesize our interviews, we created two personas that cumalitively represented our user's goals and pain points. The key aspect of these personas was that they were <b>data-driven </b>and cleary defined our user group between <b>commuter vs. recreational</b> bikers.</p><br></br>
           <Carousel>
@@ -304,7 +308,7 @@ function Sentinel() {
             You can view our full report with the complete protocol, participant profiles, questions and insights by clicking the button below.</p>
             <Screen img={require("../images/sentinel/test.jpg")} cap="Testing our paper prototype"></Screen>
           </div>
-          <div style={{width: '30vw'}}><NeuButton2 text="Full Report" onClick={() => openPDF('../images/sentinel/pp/e.pdf')}></NeuButton2></div>
+          <div style={{width: '30vw'}}><NeuButton2 text="Full Report" onClick={() => openPDF(testrep)}></NeuButton2></div>
           <br></br>
           <h4>Main Insights</h4><br></br>
           <div style={{display: 'flex', flexDirection:'row', justifyContent: 'space-between', flexWrap: 'wrap', width: "85vw"}}>
@@ -369,7 +373,7 @@ function Sentinel() {
                 </div>
               </Carousel>
               <p>Click the button below to view all 35 wireframes created for Sentinel<br></br><br></br></p>
-              <div style={{width: '30vw'}}><NeuButton2 text="Full Wireframes" onClick={() => openPDF('../images/sentinel/wireframes/w.pdf')}></NeuButton2></div>
+              <div style={{width: '30vw'}}><NeuButton2 text="Full Wireframes" onClick={() => openPDF(wireframes)}></NeuButton2></div>
               <hr></hr>
         </article>
         <article>
@@ -431,7 +435,7 @@ function Sentinel() {
           <p><b>Proficiency in interface design - </b>In creating prototypes, wireframes and mockups, I got a lot of practice making interfaces that I enjoyed and look forward to honing in future work.</p>
           <p><b>First comprehensive UX project - </b>As a newly accepted student into a design program, I am proud to have this as my first UX case study. The hands-on experience working with our user group, reaffirmed my passion for this emerging field.</p>
           <hr></hr>
-          <br></br><h2 style={{margin: 'auto'}}>Thank You for Reading !</h2><br></br>
+          <br></br><h2 style={{margin: 'auto'}}>Thank You for Reading !</h2><br></br><br></br>
         </article>
       </body>
       </div>
