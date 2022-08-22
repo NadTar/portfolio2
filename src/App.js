@@ -32,7 +32,7 @@ class App extends Component {
         <div className="App">
           <Nav page={this.state.page}></Nav><br></br><br></br>
           <Switch>
-            <Route path="/portfolio2" exact component={Portfolio}/>
+            <Route path="/portfolio2" exact component={Poolbuddy}/>
             <Route path="/about" component={About}/>
             <Route path="/resume" component={Resume}/>
             <Route path="/poolbuddy" component={Poolbuddy}/>
